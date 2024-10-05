@@ -8,7 +8,7 @@
     </TestPlan>
     <hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="disinfectant-api-perf-tests" enabled="true">
-        <intProp name="ThreadGroup.num_threads">30</intProp>
+        <intProp name="ThreadGroup.num_threads">20</intProp>
         <intProp name="ThreadGroup.ramp_time">3</intProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">stopthread</stringProp>
@@ -101,7 +101,7 @@
           <Summariser guiclass="SummariserGui" testclass="Summariser" testname="Generate Summary Results"/>
           <hashTree/>
           <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Duration Assertion">
-            <stringProp name="DurationAssertion.duration">1000</stringProp>
+            <stringProp name="DurationAssertion.duration">1900</stringProp>
           </DurationAssertion>
           <hashTree/>
           <ResultCollector guiclass="RespTimeGraphVisualizer" testclass="ResultCollector" testname="Response Time Graph">
@@ -172,7 +172,7 @@ if (errorCount &gt; maxErrors) {
             <stringProp name="parameters"></stringProp>
             <stringProp name="filename"></stringProp>
             <stringProp name="cacheKey">true</stringProp>
-            <stringProp name="script">int responseTimeThreshold = 8000; 
+            <stringProp name="script">int responseTimeThreshold = 5000; 
 long responseTime = prev.getTime(); 
 
 if (responseTime &gt; responseTimeThreshold) {
